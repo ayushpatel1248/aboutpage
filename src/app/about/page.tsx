@@ -177,12 +177,12 @@ export default function aboutUs() {
     </div>
 
       <section className="py-12 relative z-20 ">
-        <div className="border bg-card text-card-foreground shadow-sm max-w-[850px] w-full m-auto rounded-xl">
-          <div className="flex flex-col space-y-1.5 p-6">
-            <h3 className="text-2xl font-semibold leading-none tracking-tight">
+        <div className="border bg-card shadow-sm max-w-[850px] w-full m-auto rounded-xl">
+          <div className="flex flex-col p-6">
+            <h3 className="text-2xl font-semibold">
               Our Culture
             </h3>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm">
               We foster a collaborative and inclusive environment where
               innovation thrives, professional growth is supported, and every
               team member is valued.

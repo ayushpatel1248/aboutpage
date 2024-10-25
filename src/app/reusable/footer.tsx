@@ -21,7 +21,7 @@ export default function Footer() {
                 src={logoimg}
               />
               </div>
-              <div className="self-center text-3xl font-semibold whitespace-nowrap text-white">
+              <div className="self-center text-3xl font-semibold text-white">
                 Everything Talent
               </div>
             </Link>
