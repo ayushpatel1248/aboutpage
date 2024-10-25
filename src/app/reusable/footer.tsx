@@ -1,14 +1,15 @@
 import Image from "next/image";
 import footerimage from "../images /footerimage.webp"
 import logoimg from "../images /acme-logo-dark.png"
-import { log } from "console";
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="py-4 sm:py-6 bg-black border-t">
       <section className="mx-auto">
         <div className="md:flex md:justify-between md:container px-4 sm:px-6 md:pt-16 p-0 flex-row md:flex-col md:gap-[15px] gap-[10px]">
           <div className="mb-6 md:mb-0">
-            <a href="/" className="items-center">
+            <Link href="/" className="items-center">
               <div>
               <Image
                 alt="Everything Talent Logo"
@@ -23,7 +24,7 @@ export default function Footer() {
               <div className="self-center text-3xl font-semibold whitespace-nowrap text-white">
                 Everything Talent
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -33,39 +34,39 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-400">
                 <li className="mb-4">
-                  <a href="/blog" className="hover:underline">
+                  <Link href="/blog" className="hover:underline">
                     Blogs
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="/about/#our-story" className="hover:underline">
+                  <Link href="/about/#our-story" className="hover:underline">
                     Success Stories
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <Link href="#" className="hover:underline">
                     Case Studies
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <Link href="#" className="hover:underline">
                     Whitepapers
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="/faqs" className="hover:underline">
+                  <Link href="/faqs" className="hover:underline">
                     FAQs
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <Link href="#" className="hover:underline">
                     Hiring Guides
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="/support" className="hover:underline">
+                  <Link href="/support" className="hover:underline">
                     Support
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -76,39 +77,39 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-400">
                 <li className="mb-4">
-                  <a href="/pricing" className="hover:underline">
+                  <Link href="/pricing" className="hover:underline">
                     Pricing
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="/use-cases/hiring-solutions" className="hover:underline">
+                  <Link href="/use-cases/hiring-solutions" className="hover:underline">
                     Hiring Solutions
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="/use-cases/funded-startups" className="hover:underline">
+                  <Link href="/use-cases/funded-startups" className="hover:underline">
                     Funded Startups
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="/login" className="hover:underline">
+                  <Link href="/login" className="hover:underline">
                     Free Trial
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="/support" className="hover:underline">
+                  <Link href="/support" className="hover:underline">
                     Contact Support
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <Link href="#" className="hover:underline">
                     Request Demo
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <Link href="#" className="hover:underline">
                     Trust
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -119,24 +120,24 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-400">
                 <li className="mb-4">
-                  <a href="/privacy-policy" className="hover:underline">
+                  <Link href="/privacy-policy" className="hover:underline">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="/terms" className="hover:underline">
+                  <Link href="/terms" className="hover:underline">
                     Terms of Service
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="/terms" className="hover:underline">
+                  <Link href="/terms" className="hover:underline">
                     Cookie Policy
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="/terms" className="hover:underline">
+                  <Link href="/terms" className="hover:underline">
                     CCPA Compliance
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -160,13 +161,13 @@ export default function Footer() {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm sm:text-center text-gray-400">
             © 2024{" "}
-            <a href="https://usenextbase.com" className="hover:underline">
+            <Link href="https://usenextbase.com" className="hover:underline">
               Everything Talent Labs, LLC
-            </a>
+            </Link>
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-            <a href="https://twitter.com/EVRYTNGTALENT" className="text-gray-500 hover:text-white">
+            <Link href="https://twitter.com/EVRYTNGTALENT" className="text-gray-500 hover:text-white">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   fillRule="evenodd"
@@ -174,14 +175,14 @@ export default function Footer() {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
-            <a href="https://www.linkedin.com/company/everything-talent-ai/" className="text-gray-500 hover:text-white">
+            </Link>
+            <Link href="https://www.linkedin.com/company/everything-talent-ai/" className="text-gray-500 hover:text-white">
               <svg className="w-7 h-8" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M2 1C1.44772 1 1 1.44772 1 2V13C1 13.5523 1.44772 14 2 14H13C13.5523 14 14 13.5523 14 13V2C14 1.44772 13.5523 1 13 1H2ZM3.05 6H4.95V12H3.05V6ZM5.075 4.005C5.075 4.59871 4.59371 5.08 4 5.08C3.4063 5.08 2.925 4.59871 2.925 4.005C2.925 3.41129 3.4063 2.93 4 2.93C4.59371 2.93 5.075 3.41129 5.075 4.005ZM6 6H8V6.896C8.3114 6.32784 9.11043 5.68 10.321 5.68C12.219 5.68 13 6.575 13 8.5V12H11.1V8.75C11.1 7.76 10.7407 7.2 10.017 7.2C9.16674 7.2 8.8 7.716 8.8 8.51V12H6.9V6H6Z"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

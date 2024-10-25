@@ -1,6 +1,7 @@
 import { ThumbsUp, Rocket, Layers, Eye, Users, Shield } from "lucide-react";
 import ourvalues from "../images /ourvaluesimage.webp"
 import Image from "next/image";
+
 export default function OurValues() {
   return (
     <div className="py-14 md:py-24 px-4 mx-auto text-white">

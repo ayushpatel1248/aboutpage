@@ -8,6 +8,7 @@ import story3 from "../images /story_3.webp"
 import Footer from "../reusable/footer";
 import { Button } from "@/components/ui/button";
 import OurValues from "../reusable/ourvalues";
+import Link from "next/link";
 
 
 export default function aboutUs() {
@@ -206,7 +207,7 @@ export default function aboutUs() {
           </div>
 
           <div className="items-center p-6 pt-0 flex justify-between">
-            <a href="/support">
+            <Link href="/support">
               <Button
                 asChild
                 size={"loginS"}
@@ -215,7 +216,7 @@ export default function aboutUs() {
               >
                 Contact Us
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
