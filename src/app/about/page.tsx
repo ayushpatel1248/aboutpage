@@ -7,6 +7,8 @@ import story2 from "../images /story_2.webp"
 import story3 from "../images /story_3.webp"
 import Footer from "../reusable/footer";
 import { Button } from "@/components/ui/button";
+import OurValues from "../reusable/ourvalues";
+
 
 export default function aboutUs() {
   return (
@@ -155,8 +157,23 @@ export default function aboutUs() {
         </div>
       </div>
     </section>
-
     {/* our story section end here */}
+
+    {/* our values start */}
+    <OurValues/>
+    {/* our values end */}
+
+    {/* our expert team */}
+    <div className="flex justify-center mb-6 md:mb-12 text-white">
+      <div className="text-center w-[80vw]">
+        <h2 className={"text-3xl font-bold md:text-[45px] mb-4"}>
+          Our Experts Team
+        </h2>
+        <p className="text-xl font-normal mt-2">
+          At Everything Talent, our innovative team develops AI-driven assessments and an advanced ATS to modernize hiring. We focus on reducing bias, making recruitment efficient, and providing accessible tools for companies of all sizes to attract top talent.
+        </p>
+      </div>
+    </div>
 
       <section className="py-12 relative z-20 ">
         <div className="border bg-card text-card-foreground shadow-sm max-w-[850px] w-full m-auto rounded-xl">
@@ -202,6 +219,8 @@ export default function aboutUs() {
           </div>
         </div>
       </section>
+
+      
       <Footer />
     </>
   );
