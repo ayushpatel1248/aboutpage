@@ -13,7 +13,7 @@ import Link from "next/link";
 
 export default function aboutUs() {
   return (
-    <>
+    <div className="bg-black">
       <Navbar />
       <section className="bg-black py-20 md:py-22">
         <div className="px-4 mr-24  sm:px-6 text-white relative">
@@ -223,6 +223,6 @@ export default function aboutUs() {
 
       
       <Footer />
-    </>
+    </div>
   );
 }
