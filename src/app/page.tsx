@@ -14,5 +14,5 @@ export default function Home() {
   };
   setNewView();
 
-  return <div className="dark">go on about page by clicking here <Link href="/about"><Button>click here</Button></Link></div>;
+  return <div className="dark">go on about page by clicking here = <Link href="/about"><Button>click here</Button></Link></div>;
 }
