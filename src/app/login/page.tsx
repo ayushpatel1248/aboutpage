@@ -1,13 +1,15 @@
-'use client';
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/lib/supabase";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Toaster } from "@/components/ui/toaster";
+import { useToast } from "@/hooks/use-toast";
+import { ToastAction } from "@/components/ui/toast";
 
-
-const Login = () => { 
+const Login = () => {
   const [data, setData] = useState<{
     email: string;
     password: string;
@@ -15,9 +17,9 @@ const Login = () => {
     email: "",
     password: "",
   });
+
+  const { toast } = useToast();
   const router = useRouter();
-
-
 
   const login = async () => {
     try {
@@ -25,14 +27,28 @@ const Login = () => {
         email: data.email,
         password: data.password,
       });
-      console.log(dataUser); 
+      console.log(dataUser);
       if (!error) {
-        console.log("inside if condition")
+        console.log("inside if condition");
         console.log(data);
-        router.push("/authenticated")
+        router.push("/authenticated");
       }
-      if(error) console.log(error);
+      if (error) {
+        console.log(error);
+        toast({
+            variant: "destructive",
+            title: "oh No!",
+            description: `${error.message}`,
+            action: <ToastAction altText="Try again">Try again</ToastAction>,
+          });
+      }
     } catch (err) {
+      toast({
+        variant: "destructive",
+        title: "Uh oh!",
+        description: `${err}`,
+        action: <ToastAction altText="Try again">Try again</ToastAction>,
+      });
       console.log(err);
     }
   };
@@ -63,8 +79,11 @@ const Login = () => {
           placeholder="password"
           onChange={handleChange}
         />
-        <Button className="hover:bg-slate-800" onClick={login}>submit</Button>
+        <Button className="hover:bg-slate-800" onClick={login}>
+          submit
+        </Button>
       </div>
+      <Toaster />
     </div>
   );
 };
