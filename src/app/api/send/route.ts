@@ -19,8 +19,11 @@ export async function POST(req: Request) {
     }
 
     return new Response(JSON.stringify(data), { status: 200 });
-  } catch (error) {
-
-    return new Response(JSON.stringify({ error: error.message }), { status: 500 });
-  }
+  }  catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+    return new Response(
+      JSON.stringify({ error: errorMessage }),
+      { status: 500 }
+    );
+}
 }
