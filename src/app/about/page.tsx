@@ -13,13 +13,13 @@ import Link from "next/link";
 
 export default function aboutUs() {
   return (
-    <div className="bg-black">
+    <div className="dark:bg-black">
       <Navbar />
-      <section className="bg-black py-20 md:py-22">
+      <section className="dark:bg-black py-20 md:py-22">
         <div className="px-4 mr-24  sm:px-6 text-white relative">
           <div className="flex flex-col-reverse md:flex-row items-center justify-between lg:gap-0 md:gap-10">
             <div>
-              <p className="text-transparent bg-clip-text bg-[linear-gradient(to_right,_#3c3cbf_0%,_#FFFFFF_50%)] font-bold text-[2.2rem] lg:text-7xl md:mr-12 md:mt-0 text-center md:w-full mt-12 md:text-left">
+              <p className="text-transparent bg-clip-text bg-[linear-gradient(to_right,_#000_0%,_#3c3cbf_50%)] dark:bg-[linear-gradient(to_right,_#3c3cbf_0%,_#FFFFFF_50%)] font-bold text-[2.2rem] lg:text-7xl md:mr-12 md:mt-0 text-center md:w-full mt-12 md:text-left">
                 Everything Talent simplifies hiring with a free ATS and
                 AI-driven assessments.
               </p>
@@ -32,7 +32,7 @@ export default function aboutUs() {
                   alt=""
                   width={400}
                   height={400}
-                  className="rotate-45 w-48 h-48 border-[3px] border-[#3577f39a] lg:w-80 lg:h-80 object-cover"
+                  className="rotate-45 w-48 h-48 border-[3px] dar:border-[#3577f39a] lg:w-80 lg:h-80 object-cover"
                 />
 
                 <Image
@@ -40,7 +40,7 @@ export default function aboutUs() {
                   width={300}
                   height={300}
                   decoding="async"
-                  className="hidden md:block -mt-16 rotate-45 border border-[#3577f39a] w-48 h-48 lg:w-80 lg:h-80 object-cover"
+                  className="hidden md:block -mt-16 rotate-45 border dark:border-[#3577f39a] w-48 h-48 lg:w-80 lg:h-80 object-cover"
                   src={image2}
                 />
               </div>
@@ -51,7 +51,7 @@ export default function aboutUs() {
 
       {/* our story section start */}
       <section
-      className="py-14 md:py-24bg-transparent text-white bg-[#020817]"
+      className="py-14 md:py-24bg-transparent dark:text-white dark:bg-[#020817]"
       id="our-story"
     >
       <div className="mx-auto px-4">
@@ -165,7 +165,7 @@ export default function aboutUs() {
     {/* our values end */}
 
     {/* our expert team */}
-    <div className="flex justify-center mb-6 md:mb-12 text-white">
+    <div className="flex justify-center mb-6 md:mb-12 dark:text-white">
       <div className="text-center w-[80vw]">
         <h2 className={"text-3xl font-bold md:text-[45px] mb-4"}>
           Our Experts Team
@@ -176,7 +176,7 @@ export default function aboutUs() {
       </div>
     </div>
 
-      <section className="py-12 relative z-20 ">
+      <section className="py-12 relative z-20 dark:bg-black">
         <div className="border bg-card shadow-sm max-w-[850px] w-full m-auto rounded-xl">
           <div className="flex flex-col p-6">
             <h3 className="text-2xl font-semibold">

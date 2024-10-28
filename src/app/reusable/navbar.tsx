@@ -17,7 +17,7 @@ const Header = () => {
   const { setTheme } = useTheme();
 
   return (
-    <header className="bg-black text-white border-b border-[#1F293A] dark:bg-[#000000]">
+    <header className="dark:bg-black border-b dark:border-[#1F293A] dark:bg-[#000000]">
       <div className="px-8 mx-auto py-2 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-3">
@@ -29,43 +29,43 @@ const Header = () => {
         <nav className="hidden md:flex space-x-8 font-bold">
           <Link
             href="/"
-            className="font-regular hover:text-slate-300 text-slate-400 text-sm"
+            className="font-regular text-slate-500 dark:hover:text-slate-300 dark:text-slate-400 text-sm"
           >
             Home
           </Link>
           <Link
             href="/about"
-            className="font-regular hover:text-slate-300 text-slate-400 text-sm"
+            className="font-regular text-slate-500 dark:hover:text-slate-300 dark:text-slate-400 text-sm"
           >
             About
           </Link>
           <Link
             href="/use-cases"
-            className="font-regular hover:text-slate-300 text-slate-400 text-sm"
+            className="font-regular text-slate-500 dark:hover:text-slate-300 dark:text-slate-400 text-sm"
           >
             Use Cases
           </Link>
           <Link
             href="/pricing"
-            className="font-regular hover:text-slate-300 text-slate-400 text-sm"
+            className="font-regular text-slate-500 dark:hover:text-slate-300 dark:text-slate-400 text-sm"
           >
             Pricing
           </Link>
           <Link
             href="/resources"
-            className="font-regular hover:text-slate-300 text-slate-400 text-sm"
+            className="font-regular text-slate-500 dark:hover:text-slate-300 dark:text-slate-400 text-sm"
           >
             Resources
           </Link>
           <Link
             href="/blog"
-            className="font-regular hover:text-slate-300 text-slate-400 text-sm"
+            className="font-regular text-slate-500 dark:hover:text-slate-300 dark:text-slate-400 text-sm"
           >
             Blog
           </Link>
           <Link
             href="/support"
-            className="font-regular hover:text-slate-300 text-slate-400 text-sm"
+            className="font-regular text-slate-500 dark:hover:text-slate-300 dark:text-slate-400 text-sm"
           >
             Support
           </Link>

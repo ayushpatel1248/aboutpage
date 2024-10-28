@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="py-4 sm:py-6 bg-black border-t">
+    <footer className="py-4 sm:py-6 dark:bg-black border-t text-black">
       <section className="mx-auto">
         <div className="md:flex md:justify-between md:container px-4 sm:px-6 md:pt-16 p-0 flex-row md:flex-col md:gap-[15px] gap-[10px]">
           <div className="mb-6 md:mb-0">

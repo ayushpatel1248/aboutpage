@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function OurValues() {
   return (
-    <div className="py-14 md:py-24 px-4 mx-auto text-white">
+    <div className="py-14 md:py-24 px-4 mx-auto dark:text-white">
       <div className="flex max-w-5xl justify-center text-center mx-auto md:mb-6">
         <div>
           <h2 className="text-3xl font-bold leading-tight md:text-[45px] mb-4">Our Values</h2>
