@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import { Moon, Sun } from "lucide-react";
@@ -10,10 +10,65 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabase";
+import { Toaster } from "@/components/ui/toaster";
+import { useToast } from "@/hooks/use-toast";
+import { ToastAction } from "@/components/ui/toast";
 
 export default function Signup() {
+  const [data, setData] = useState<{
+    email: string;
+    password: string;
+  }>({
+    email: "",
+    password: "",
+  });
+
   const { setTheme } = useTheme();
+  const router = useRouter();
+  const { toast } = useToast();
+
+  const signup = async () => {
+    try {
+      const { data: dataUser, error } = await supabase.auth.signUp({
+        email: data.email,
+        password: data.password,
+      });
+      console.log(dataUser);
+      if (!error) {
+        console.log("inside if condition");
+        console.log(data);
+        router.push("/authenticated");
+      }
+      if (error) {
+        console.log(error);
+        toast({
+          variant: "destructive",
+          title: "oh No!",
+          description: `${error.message}`,
+          action: <ToastAction altText="Try again">Try again</ToastAction>,
+        });
+      }
+    } catch (err) {
+      console.log(err);
+      toast({
+        variant: "destructive",
+        title: "oh No!",
+        description: `${err}`,
+        action: <ToastAction altText="Try again">Try again</ToastAction>,
+      });
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setData((prev: any) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-200 dark:bg-gray-900 dark:text-black">
@@ -54,6 +109,7 @@ export default function Signup() {
               type="email"
               name="email"
               id="email"
+              onChange={handleChange}
             />
           </div>
           <div className="flex flex-col mb-6 md:w-full">
@@ -68,12 +124,14 @@ export default function Signup() {
               type="password"
               name="password"
               id="password"
+              onChange={handleChange}
             />
           </div>
           <div className="flex items-center justify-between">
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               type="button"
+              onClick={signup}
             >
               Login
             </button>
@@ -89,6 +147,7 @@ export default function Signup() {
           </p>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 }

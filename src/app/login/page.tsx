@@ -65,26 +65,26 @@ const Login = () => {
   return (
     <div className="min-h-screen flex justify-center items-center ">
       <div className="min-w-60 p-5 bg-slate-400 rounded-md	">
-        <h2 className="mb-4">Login </h2>
+        <h2 className="mb-4 dark:text-black">Login </h2>
         <Input
-          className="mb-4 bg-white"
+          className="mb-4 bg-white dark:text-black"
           type="email"
           name="email"
           placeholder="Email"
           onChange={handleChange}
         />
         <Input
-          className="mb-4 bg-white"
+          className="mb-4 bg-white dark:text-black"
           type="password"
           name="password"
           placeholder="password"
           onChange={handleChange}
         />
-        <Button className="hover:bg-slate-800" onClick={login}>
+        <Button className="hover:bg-slate-800 " onClick={login}>
           submit
         </Button>
         <div className="text-center">
-            <p className="text-grey-dark text-sm">
+            <p className="text-grey-dark text-sm dark:text-black">
               Don't have an account?{" "}
               <Link href="/signup" className="no-underline text-blue font-bold">
                 SignUp

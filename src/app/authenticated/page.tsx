@@ -20,7 +20,7 @@ const Authenticated = () => {
    }
 
   return (
-    <div className="flex min-h-screen justify-center items-center bg-white">
+    <div className="flex min-h-screen justify-center items-center bg-white dark:text-black">
         <h1  className="font-extrabold size">authenticated successfully</h1>
         <Button onClick={signout}> logout </Button>
     </div>
