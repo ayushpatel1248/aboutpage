@@ -25,6 +25,7 @@ export default function Signup() {
     email: "",
     password: "",
   });
+  const [isLoading, setIsLoading] = useState(false)
 
   const { setTheme } = useTheme();
   const router = useRouter();
@@ -32,6 +33,7 @@ export default function Signup() {
 
   const signup = async () => {
     try {
+        setIsLoading(true);
       const { data: dataUser, error } = await supabase.auth.signUp({
         email: data.email,
         password: data.password,
@@ -59,6 +61,9 @@ export default function Signup() {
         description: `${err}`,
         action: <ToastAction altText="Try again">Try again</ToastAction>,
       });
+    }
+    finally{
+        setIsLoading(false);
     }
   };
 
@@ -132,8 +137,9 @@ export default function Signup() {
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               type="button"
               onClick={signup}
+              disabled={isLoading}
             >
-              Login
+              SignUp
             </button>
           </div>
         </form>
