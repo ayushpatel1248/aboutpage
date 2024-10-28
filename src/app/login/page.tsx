@@ -85,7 +85,7 @@ const Login = () => {
         </Button>
         <div className="text-center">
             <p className="text-grey-dark text-sm dark:text-black">
-              Don't have an account?{" "}
+              Dont have an account?{" "}
               <Link href="/signup" className="no-underline text-blue font-bold">
                 SignUp
               </Link>
