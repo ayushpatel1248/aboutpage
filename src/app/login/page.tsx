@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
 import { ToastAction } from "@/components/ui/toast";
+import Link from "next/link";
 
 const Login = () => {
   const [data, setData] = useState<{
@@ -82,6 +83,15 @@ const Login = () => {
         <Button className="hover:bg-slate-800" onClick={login}>
           submit
         </Button>
+        <div className="text-center">
+            <p className="text-grey-dark text-sm">
+              Don't have an account?{" "}
+              <Link href="/signup" className="no-underline text-blue font-bold">
+                SignUp
+              </Link>
+              .
+            </p>
+          </div>
       </div>
       <Toaster />
     </div>
