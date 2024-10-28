@@ -31,7 +31,7 @@ const Header = () => {
             href="/"
             className="font-regular text-slate-500 dark:hover:text-slate-300 dark:text-slate-400 text-sm"
           >
-            Home
+            Home   
           </Link>
           <Link
             href="/about"
