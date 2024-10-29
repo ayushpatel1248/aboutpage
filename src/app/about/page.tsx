@@ -9,6 +9,7 @@ import Footer from "../reusable/footer";
 import { Button } from "@/components/ui/button";
 import OurValues from "../reusable/ourvalues";
 import Link from "next/link";
+import Timeline from "../reusable/timeline"
 
 
 export default function aboutUs() {
@@ -175,6 +176,8 @@ export default function aboutUs() {
         </p>
       </div>
     </div>
+    <Timeline/>
+    
 
       <section className="py-12 relative z-20 dark:bg-black">
         <div className="border bg-card shadow-sm max-w-[850px] w-full m-auto rounded-xl">
