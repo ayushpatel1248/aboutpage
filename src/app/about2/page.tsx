@@ -1,6 +1,10 @@
 import RetroGrid from "../reusable/retrogrid";
 import Navbar from "../reusable/navbar";
 import Aboutus from "../reusable/aboutus";
+import Ourfeatures from "../reusable/ourfeatures";
+import Ourteam2 from "../reusable/ourteam2";
+import Footer from "../reusable/footer";
+import Timeline from "../reusable/timeline";
 const about2 = () => {
   return (
     <div>
@@ -9,6 +13,16 @@ const about2 = () => {
       <RetroGrid />
       {/* now about us start */}
       <Aboutus />
+      {/* our features */}
+      <Ourfeatures />
+      {/* our featurs end */}
+
+      {/* timeline start  */}
+      <Timeline />
+      <Ourteam2 />
+
+      {/* footer */}
+      <Footer />
     </div>
   );
 };
